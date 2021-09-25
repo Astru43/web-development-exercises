@@ -1,0 +1,10 @@
+.test
+{
+  background-color: yellow;
+}
+
+body {
+  display: grid;
+  height: 100%;
+  place-content: center;
+}
