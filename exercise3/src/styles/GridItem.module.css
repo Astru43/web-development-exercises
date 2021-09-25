@@ -1,0 +1,52 @@
+.itemTitle {
+    font-size: large;
+}
+
+.seller {
+    color: gray;
+    font-size: 0.9rem;
+}
+
+.lineHeight1 {
+    line-height: 1;
+}
+
+.imageContainer {
+    display: flex;
+    height: 250px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.image {
+    max-height: 250px;
+    max-width: -webkit-fill-available;
+}
+
+.cutText {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+.price {
+    font-size: 1.6rem;
+}
+
+.price > .desimal,
+.price > .unit {
+    position: relative;
+    font-size: 0.8rem;
+    top: -0.55rem;
+}
+
+.marginTopBottom8 {
+    margin: 8px 0px;
+}
+
+.itemBorder {
+    border-bottom: 2px solid lightgray;
+}

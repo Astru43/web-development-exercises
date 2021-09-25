@@ -1,0 +1,174 @@
+.mainPage {
+    display: flex;
+    max-width: 1012px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+.mainPage .content {
+    flex: auto;
+    max-width: 980px;
+    margin-top: 24px;
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+.mainPage .mainContentBorder {
+    border-top: 1px solid;
+}
+
+.mainPage .mainTopicTitle {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    align-self: center;
+}
+
+.paddingLeftRight16 {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.paddingTopBottom16 {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.paddingTop16 {
+    padding-top: 16px;
+}
+
+.mainPage .mainImage {
+    max-width: 980px;
+    width: 100%;
+    height: auto;
+}
+
+.topicTitle {
+    color: red;
+}
+
+.topicInfo {
+    font-size: 1rem;
+    font-weight: 450;
+    padding-bottom: 16px;
+}
+
+.topicInfo .topic {
+    margin-right: 1rem;
+}
+
+.content .border {
+    border-top: 1px solid lightgray;
+}
+
+.content .borderBottom {
+    border-bottom: 1px solid lightgray;
+}
+
+.sideHeadlineImage {
+    max-width: 300px;
+    height: 169px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.sideTopic {
+    display: flex;
+}
+
+.mainPanel {
+    max-width: 70%;
+}
+
+.sidePanel {
+    max-width: 30%;
+    margin-left: 16px;
+    
+    width: 30%;
+}
+
+.sidePanel .title {
+    margin: 0px;
+    border-bottom: 1px solid black;
+}
+
+ol {
+    counter-reset: list-counter;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+ol li {
+    counter-increment: list-counter;
+}
+
+.listItemNumbered {
+    display: flex;
+}
+
+.listItemTimed {
+    display: flex;
+}
+
+.listItemNumbered::before,
+.listItemTimed .itemTime {
+    margin-right: 8px;
+    min-width: 36px;
+    text-align: center;
+    font-size: 1.75rem;
+    line-height: 1.1;
+}
+
+.listItemTimed .itemTime {
+    font-size: medium;
+    font-weight: 500;
+    color: gray;
+}
+
+.listItemNumbered::before {
+    content: counter(list-counter);
+}
+
+.listItemNumbered .itemTitle,
+.listItemTimed .itemTitle {
+    font-size: large;
+    font-weight: 600;
+}
+
+.listItemNumbered .itemDescription,
+.listItemTimed .itemDescription {
+    font-size: medium;
+    font-weight: 400;
+}
+
+.listItemNumbered .itemContent,
+.listItemTimed .itemContent {
+    margin: 0px;
+    line-height: 1.2;
+}
+
+.divider {
+    margin: 0px 0.35rem;
+}
+
+.content .showMore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content button {
+    color: black;
+    font-size: medium;
+    font-weight: 550;
+    border: 1px solid;
+    border-radius: 100px;
+    padding: 8px 16px;
+    transition: color 0.2s;
+    -webkit-transition: color 0.2s;
+}
+
+.content button:hover {
+    color: gray;
+}

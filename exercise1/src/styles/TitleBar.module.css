@@ -1,0 +1,49 @@
+.titleBar {
+    color: white;
+    background-color: #0059ff;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.title {
+    margin-left: 5vw;
+    margin-right: 1vw;
+}
+
+button {
+    color: white;
+    background-color: transparent;
+    border: transparent;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    font-size: large;
+    transition: background-color 0.2s, color 0.2s;
+    -webkit-transition: background-color 0.2s, color 0.2s;
+}
+
+.floatButtons {
+    flex: auto;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 3vw;
+}
+
+.floatButtons .btnSubscribe {
+    border-radius: 200px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: white;
+    color: black;
+}
+
+.floatButtons .btnSubscribe:hover {
+    color: black;
+    background-color: #dbdbdb;
+}
+
+button:hover {
+    color: #dbdbdb;
+}

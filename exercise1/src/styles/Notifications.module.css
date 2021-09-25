@@ -1,0 +1,25 @@
+
+.item {
+    display: flex;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+.item .text {
+    background-color: rgb(7, 175, 175);
+    color: white;
+    padding: 16px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    max-width: 980px;
+    flex: auto;
+    font-weight: 500;
+}
+
+.item .AD {
+    background-color: rgb(107, 170, 199);
+}
+
+.container {
+    margin-top: 16px;
+}

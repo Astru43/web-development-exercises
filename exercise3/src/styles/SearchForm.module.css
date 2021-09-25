@@ -1,0 +1,11 @@
+.search {
+    display: grid;
+    place-content: center;
+    background-color: lightblue;
+}
+
+.search > input {
+    font-size: large;
+    width: 400px;
+    margin: 10px;
+}
