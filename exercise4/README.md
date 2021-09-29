@@ -10,6 +10,8 @@ will compile and run the application.
 # Json examples
 ## Products route
 
+In both jsons the `decimal` key can have `number` values between `0` - `99` and the `rating` key can have `number` values between `0` - `5`.
+
 ### Create item json:
 
 In create item json the `item` and `seller` keys can be eather `string` or `integer` values.
