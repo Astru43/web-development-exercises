@@ -1,0 +1,165 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/createItem.schema.json",
+    "type": "object",
+    "title": "The item creation schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "item": "Test item",
+            "seller": 2,
+            "price": {
+                "integer": 999,
+                "decimal": 99
+            },
+            "shipping": {
+                "integer": 999,
+                "decimal": 99
+            },
+            "rating": 5,
+            "img": "res/test_img_9.jpg"
+        }
+    ],
+    "required": [],
+    "properties": {
+        "item": {
+            "$id": "#/properties/item",
+            "description": "The titel/name of the item.",
+            "examples": ["Test item", 2],
+            "title": "The item schema",
+            "anyOf": [
+                { "type": "string", "default": "" },
+                { "type": "number", "minimum": 0, "default": 0 }
+            ]
+        },
+        "seller": {
+            "$id": "#/properties/seller",
+            "description": "The seller/manufacturer of the item.",
+            "examples": ["Test seller", 2],
+            "title": "The seller schema",
+            "anyOf": [
+                { "type": "string", "default": "" },
+                { "type": "number", "minimum": 0, "default": 0 }
+            ]
+        },
+        "description": {
+            "$id": "#/properties/description",
+            "type": "string",
+            "title": "The description schema",
+            "description": "The description of the item.",
+            "default": "",
+            "examples": ["Some desc"]
+        },
+        "category": {
+            "$id": "#/properties/category",
+            "type": "array",
+            "title": "The category schema",
+            "description": "Array of categories the item is part of.",
+            "default": [],
+            "examples": [["Random"]],
+            "items": {
+                "$id": "#/properties/category/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/category/items/anyOf/0",
+                        "type": "string",
+                        "title": "The first anyOf schema",
+                        "description": "An category the item belongs.",
+                        "default": "",
+                        "examples": ["Random"]
+                    }
+                ]
+            }
+        },
+        "price": {
+            "$id": "#/properties/price",
+            "default": {},
+            "description": "The price of the item.",
+            "examples": [
+                {
+                    "integer": 999,
+                    "decimal": 99
+                }
+            ],
+            "required": ["integer", "decimal"],
+            "title": "The price schema",
+            "type": "object",
+            "properties": {
+                "integer": {
+                    "$id": "#/properties/price/properties/integer",
+                    "type": "integer",
+                    "title": "The integer schema",
+                    "description": "Integer part of the price.",
+                    "default": 0,
+                    "examples": [999]
+                },
+                "decimal": {
+                    "$id": "#/properties/price/properties/decimal",
+                    "default": 0,
+                    "description": "decimal part of the price.",
+                    "examples": [99],
+                    "title": "The decimal schema",
+                    "maximum": 99,
+                    "minimum": 0,
+                    "type": "integer"
+                }
+            },
+            "additionalProperties": false
+        },
+        "shipping": {
+            "$id": "#/properties/shipping",
+            "default": {},
+            "description": "The shipping cost of the item.",
+            "examples": [
+                {
+                    "integer": 999,
+                    "decimal": 99
+                }
+            ],
+            "required": ["integer", "decimal"],
+            "title": "The shipping schema",
+            "type": "object",
+            "properties": {
+                "integer": {
+                    "$id": "#/properties/shipping/properties/integer",
+                    "type": "integer",
+                    "title": "The integer schema",
+                    "description": "Integer part of the shipping cost.",
+                    "default": 0,
+                    "examples": [999]
+                },
+                "decimal": {
+                    "$id": "#/properties/shipping/properties/decimal",
+                    "default": 0,
+                    "description": "decimal part of the shipping cost.",
+                    "examples": [99],
+                    "title": "The decimal schema",
+                    "maximum": 99,
+                    "minimum": 0,
+                    "type": "integer"
+                }
+            },
+            "additionalProperties": false
+        },
+        "rating": {
+            "$id": "#/properties/rating",
+            "default": 0,
+            "description": "The item rating.",
+            "examples": [5],
+            "title": "The rating schema",
+            "maximum": 5,
+            "minimum": 0,
+            "type": "integer"
+        },
+        "img": {
+            "$id": "#/properties/img",
+            "type": "string",
+            "title": "The img schema",
+            "description": "The image source of the items image.",
+            "default": "",
+            "examples": ["res/test_img_9.jpg"]
+        }
+    },
+    "additionalProperties": false
+}

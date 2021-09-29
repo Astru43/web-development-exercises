@@ -1,0 +1,77 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/createUser.schema.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "firstName": "Test",
+            "lastName": "user",
+            "address": "Some random address 11 R 22",
+            "phone": "+000-0000-000-00",
+            "email": "some.email@email.com"
+        }
+    ],
+    "required": [
+        "firstName",
+        "lastName",
+        "address",
+        "phone",
+        "email"
+    ],
+    "properties": {
+        "firstName": {
+            "$id": "#/properties/firstName",
+            "type": "string",
+            "title": "The firstName schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Test"
+            ]
+        },
+        "lastName": {
+            "$id": "#/properties/lastName",
+            "type": "string",
+            "title": "The lastName schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "user"
+            ]
+        },
+        "address": {
+            "$id": "#/properties/address",
+            "type": "string",
+            "title": "The address schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Some random address 11 R 22"
+            ]
+        },
+        "phone": {
+            "$id": "#/properties/phone",
+            "type": "string",
+            "title": "The phone schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "+000-0000-000-00"
+            ]
+        },
+        "email": {
+            "$id": "#/properties/email",
+            "type": "string",
+            "title": "The email schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "some.email@email.com"
+            ]
+        }
+    },
+    "additionalProperties": false
+}

@@ -1,0 +1,63 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/createInvoice.schema.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "user": "cef2b8c4-fc98-48ff-be79-bb24a482cfc6",
+            "items": [
+                "0fcc4263-e48a-4a4e-9523-29ae2e4c60f0",
+                "b42cfe08-674a-4d6e-b630-5bd0da2dc319"
+            ]
+        }
+    ],
+    "required": [
+        "user",
+        "items"
+    ],
+    "properties": {
+        "user": {
+            "$id": "#/properties/user",
+            "type": "string",
+            "title": "The user schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "cef2b8c4-fc98-48ff-be79-bb24a482cfc6"
+            ]
+        },
+        "items": {
+            "$id": "#/properties/items",
+            "type": "array",
+            "title": "The items schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+                [
+                    "0fcc4263-e48a-4a4e-9523-29ae2e4c60f0",
+                    "b42cfe08-674a-4d6e-b630-5bd0da2dc319"
+                ]
+            ],
+            "items": {
+                "$id": "#/properties/items/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/items/items/anyOf/0",
+                        "type": "string",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "0fcc4263-e48a-4a4e-9523-29ae2e4c60f0",
+                            "b42cfe08-674a-4d6e-b630-5bd0da2dc319"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "additionalProperties": false
+}
