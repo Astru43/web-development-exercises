@@ -36,7 +36,7 @@
     font-size: 1.6rem;
 }
 
-.price > .desimal,
+.price > .decimal,
 .price > .unit {
     position: relative;
     font-size: 0.8rem;

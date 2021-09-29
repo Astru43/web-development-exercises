@@ -22,8 +22,8 @@ export default class GridItem extends Component {
                     <span>
                         {item.price.integer}
                     </span>
-                    <span className={styles.desimal}>
-                        {item.price.desimal}
+                    <span className={styles.decimal}>
+                        {item.price.decimal}
                     </span>
                 </div>
             </div>
@@ -37,11 +37,11 @@ GridItem.propTypes = {
     img: PropTypes.string,
     item: PropTypes.string,
     price: PropTypes.shape({
-      desimal: PropTypes.string,
+      decimal: PropTypes.string,
       integer: PropTypes.string
     }),
     shipping: PropTypes.shape({
-        desimal: PropTypes.string,
+        decimal: PropTypes.string,
         integer: PropTypes.string
       }),
     rating: PropTypes.number,

@@ -14,11 +14,11 @@ class Item {
         this.seller = data.sellers[Math.floor(Math.random() * 24)];
         this.price = {
             integer: Math.floor(Math.random() * 200).toString(),
-            desimal: Math.floor(Math.random() * 100).toString().padStart(2, "0")
+            decimal: Math.floor(Math.random() * 100).toString().padStart(2, "0")
         };
         this.shipping = {
             integer: Math.floor(Math.random() * 200).toString(),
-            desimal: Math.floor(Math.random() * 100).toString().padStart(2, "0")
+            decimal: Math.floor(Math.random() * 100).toString().padStart(2, "0")
         };
         this.rating = Math.floor(Math.random() * 4 + 1) + Math.round((Math.random() + Number.EPSILON) * 100) / 100;
         this.img = `res/test_img_${Math.floor(Math.random() * 7)}.jpg`;
