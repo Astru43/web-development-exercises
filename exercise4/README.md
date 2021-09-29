@@ -1,15 +1,19 @@
 # Running
 Install dependencies by running
-``npm install``
+`npm install`
 
 After installing dependencies 
-``npm start``
+`npm start`
 will compile and run the application.
+
 
 # Json examples
 ## Products route
 
 ### Create item json:
+
+In create item json the `item` and `seller` keys can be eather `string` or `integer` values.
+The `integer` can't be smaller than `0`.
 
 ```json
 {
@@ -72,7 +76,7 @@ will compile and run the application.
 }
 ```
 
-## invoice route
+## Invoice route
 
 ### Create invoice json:
 

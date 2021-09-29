@@ -29,20 +29,16 @@
             "description": "The titel/name of the item.",
             "examples": ["Test item", 2],
             "title": "The item schema",
-            "anyOf": [
-                { "type": "string", "default": "" },
-                { "type": "number", "minimum": 0, "default": 0 }
-            ]
+            "type": "string",
+            "default": ""
         },
         "seller": {
             "$id": "#/properties/seller",
             "description": "The seller/manufacturer of the item.",
             "examples": ["Test seller", 2],
             "title": "The seller schema",
-            "anyOf": [
-                { "type": "string", "default": "" },
-                { "type": "number", "minimum": 0, "default": 0 }
-            ]
+            "type": "string",
+            "default": ""
         },
         "description": {
             "$id": "#/properties/description",
