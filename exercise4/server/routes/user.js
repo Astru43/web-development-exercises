@@ -11,5 +11,9 @@ router.post('/', createUserValidatorMw, (req, res) => {
     res.json(addedUser);
 });
 
+// Get all users.
+router.get('/', (req, res) => {
+    res.json(data.users);
+});
 
 export default router;

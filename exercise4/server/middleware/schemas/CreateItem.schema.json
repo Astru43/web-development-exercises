@@ -150,7 +150,7 @@
             "title": "The rating schema",
             "maximum": 5,
             "minimum": 0,
-            "type": "integer"
+            "type": "number"
         },
         "img": {
             "$id": "#/properties/img",
