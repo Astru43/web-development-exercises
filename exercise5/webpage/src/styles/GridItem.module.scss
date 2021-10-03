@@ -1,0 +1,73 @@
+.itemContainer {
+    $darkGray: rgb(90, 90, 90);
+    border-bottom: 2px solid lightgray;
+
+    .itemTitle {
+        font-size: large;
+        font-weight: 600;
+    }
+
+    .description {
+        font-size: 0.9rem;
+        color: rgb(50, 50, 50);
+    }
+
+    .seller {
+        color: $darkGray;
+        font-size: 0.9rem;
+        font-weight: normal;
+    }
+
+    .imageContainer {
+        display: flex;
+        height: 250px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        > .image {
+            max-height: 250px;
+            max-width: -webkit-fill-available;
+        }
+    }
+
+    .price {
+        font-size: 1.6rem;
+
+        > .decimal,
+        &::before {
+            position: relative;
+            font-size: 0.8rem;
+            top: -0.55rem;
+        }
+
+        &::before {
+            content: "$";
+        }
+    }
+
+    .shipping {
+        font-size: 0.9rem;
+        color: $darkGray;
+
+        &::before {
+            content: "$";
+        }
+    }
+}
+
+.lineHeight1 {
+    line-height: 1;
+}
+
+.cutText {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+.marginTopBottom8 {
+    margin: 8px 0px;
+}

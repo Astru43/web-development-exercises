@@ -1,0 +1,33 @@
+.adnimPanel {
+    display: grid;
+    grid-template-columns: max-content 400px;
+    align-items: baseline;
+    margin: 6px;
+
+    .hint {
+        grid-column: 1/3;
+    }
+
+    input {
+        font-size: large;
+        margin: 5px 10px;
+        
+        &:out-of-range {
+            color: red;
+        }
+    }
+
+    label {
+        font-size: large;
+        &::after {
+            margin-left: 0.1em;
+            content: ':';
+        }
+    }
+
+    [type="number"]::-webkit-inner-spin-button,
+    [type="number"]::-webkit-outer-spin-button {
+        appearance: none;
+        margin: 0;
+    }
+}

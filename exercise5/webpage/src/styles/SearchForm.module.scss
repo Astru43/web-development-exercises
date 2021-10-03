@@ -1,0 +1,42 @@
+.search {
+    display: grid;
+    //place-content: center;
+    align-items: center;
+    grid-template-columns: auto repeat(6, minmax(0, 1fr));
+    background-color: lightblue;
+
+    > * {
+        margin: 10px;
+    }
+
+    > button {
+        //grid-column: -2;
+        height: 27px;
+        align-self: center;
+        justify-self: end;
+    }
+
+    > button.admin {
+        justify-self: center;
+    }
+
+    > input {
+        grid-column: 2/4;
+        font-size: large;
+        width: 400px;
+        justify-self: center;
+        
+    }
+
+    .categories {
+        //grid-column: 2;
+        align-self: center;
+        height: 27px;
+    }
+
+    .sellers {
+        //grid-column: 3;
+        align-self: center;
+        height: 27px;
+    }
+}
